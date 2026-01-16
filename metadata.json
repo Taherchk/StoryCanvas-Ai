@@ -1,0 +1,5 @@
+{
+  "name": "StoryCanvas AI",
+  "description": "An Android-focused visual storytelling engine that turns long stories into consistent cinematic image sequences using Gemini Nanobanana.",
+  "requestFramePermissions": []
+}
