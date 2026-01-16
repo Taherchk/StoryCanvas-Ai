@@ -1,8 +1,7 @@
 
 import { GoogleGenAI, Type } from "@google/genai";
 
-const API_KEY = process.env.API_KEY || '';
-
+const API_KEY = import.meta.env.VITE_GOOGLE_API_KEY || '';
 export const analyzeStoryToScenes = async (story: string, customStyle: string = ''): Promise<{ text: string; prompt: string; motionPrompt: string; shotType: 'main' | 'b-roll' }[]> => {
   const ai = new GoogleGenAI({ apiKey: API_KEY });
   
