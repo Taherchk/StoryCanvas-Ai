@@ -30,7 +30,7 @@ export const analyzeStoryToScenes = async (story: string, customStyle: string = 
 
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-3-pro-preview',
+      model: 'gemini-1.5-flash',
       contents: story,
       config: {
         systemInstruction,
@@ -79,7 +79,7 @@ export const generateSceneImage = async (prompt: string, aspectRatio: string): P
   
   try {
     const response = await ai.models.generateContent({
-      model: 'gemini-2.5-flash-image',
+      model: 'gemini-1.5-flash',
       contents: {
         parts: [{ text: prompt }]
       },
