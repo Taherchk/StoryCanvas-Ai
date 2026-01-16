@@ -70,6 +70,8 @@ export const analyzeStoryToScenes = async (story: string, customStyle: string = 
     return JSON.parse(jsonStr);
   } catch (error) {
     console.error("Advanced analysis failed:", error);
+    // এই লাইনটি যোগ করুন
+alert("Error: " + JSON.stringify(error, null, 2) + " | " + error);
     return [];
   }
 };
